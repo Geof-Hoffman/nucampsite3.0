@@ -29,6 +29,9 @@
                     <h1>NuCamp</h1>
                     <h2>a better way to camp</h2>
                 </div>
+                <div class="col-xl-2 col-md-4 ">
+                    <a href="#reserveForm" class="btn  btn-small bg-info text-white" role="button" aria-pressed="true">Reserve Campsite</a>
+                </div>
             </div>
         </div>
     </header>
@@ -80,7 +83,6 @@
             
             
         <div class="row row-content align-items-center">
-
             <div class="col-sm-4  col-md-3">
                 <h2 class="text-sm-left">Featured Campsites</h2>
             </div>
@@ -107,6 +109,40 @@
         				<p class="d-none d-sm-block">Bootstrap Outfitters supplies you with gear you need at prices you can't beat.</p>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="container">
+                <div class="col col-sm-6 mx-auto" >
+                    <div class="card" >
+                        <h3 class="card-header bg-info text-white">Reserve a Campsite</h3>
+                        <div class="card-body">
+                           <form id="reserveForm">
+                                    <div class="row form-group">                                         
+                                        <label class="col-form-label mr-auto" for="numCampers">Number of Campers   </label>
+                                            <select class="col-auto col-sm-6 form-control" name="numCampers" id="numCampers">
+                                            <option selected>Select...</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                            <option value="4">Four</option>
+                                            <option value="5">Five</option>
+                                            <option value="6">Six</option>
+                                            </select>
+                                        </label>                                                                         
+                                    </div>
+                                    <div class="row form-group">
+                                    <label class="col-form-label col-sm-6  mr-auto " for="date">Date </label>
+                                        <input class="col form-control" id="date" type="date">   
+                                    </div>
+                                    <div class="row row-group" >
+                                        <div class="col">
+                                            <button  class="btn btn-primary" type="submit">Reserve</button>
+                                        </div>
+                                    </div>
+                            </form>
+                        </div>
+
+                    </form>
             </div>
         </div>
     </div>
