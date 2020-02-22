@@ -31,11 +31,11 @@
                 </div>
 
                 <div class="col-xl-2 col-md-4 mt-4">
-                    <div class="btn btn-lg btn-info" id="reserveButton">
+                    <div class="btn btn-lg btn-info" data-toggle="modal" data-target="#reserveModal-modal-lg">
                         Reserve Campsite
                     </div>
     </header>
-    <div id="reserveModal" class="modal fade" role="dialog">
+    <div id="reserveModal-modal-lg" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header bg-info text-white">
@@ -116,7 +116,7 @@
                             Contact</a></li>
                 </ul>
                 <span class="navbar-text ml-auto">
-                    <a id="loginButton">
+                    <a data-toggle="modal" data-target="#loginModal">
                         <i class="fa fa-sign-in"></i>Login</a>
                 </span>
 
@@ -358,11 +358,25 @@
         <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
         <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script src="JS/scripts.js"></script>
- 
 
-  
-       
+        <script>
+            $(function () {
+                $(".carousel").carousel({ interval: 1000 });
+                $("#carouselButton").click(function () {
+                    if ($("#carouselButton").children("i").hasClass("fa-pause")) {
+                        $(".carousel").carousel("pause");
+                        $("#carouselButton").children("i").removeClass("fa-pause");
+                        $("#carouselButton").children("i").addClass("fa-play");
+                    } else {
+                        $(".carousel").carousel("cycle");
+                        $("#carouselButton").children("i").removeClass("fa-play");
+                        $("#carouselButton").children("i").addClass("fa-pause");
+                    }
+                });
+
+            });
+        </script>
+
 </body>
 
 </html>

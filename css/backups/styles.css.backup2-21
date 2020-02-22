@@ -38,11 +38,3 @@ footer {
   position: absolute;
   right: 0;
   bottom: 0; }
-
-#reserverModal .modal-header {
-  background-color: #17A2B8;
-  color: white; }
-
-#loginModal .modal-header {
-  background-color: #901CAD;
-  color: white; }
